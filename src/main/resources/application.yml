@@ -1,9 +1,7 @@
 micronaut:
   application:
     name: eurexMerger
-  ssl:
-    enabled: true
-    buildSelfSigned: true
+
 netty:
   default:
     allocator:
