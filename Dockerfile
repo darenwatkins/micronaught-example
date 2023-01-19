@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11-openj9:jdk-11.0.2.9_openj9-0.12.1-alpine-slim
+FROM bellsoft/liberica-openjdk-alpine:17.0.5
 
 COPY /target/eurex-merger-0.1.jar /opt/eurex-merger-0.1.jar
 #COPY /target/libs /opt/libs
