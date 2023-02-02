@@ -64,6 +64,6 @@ jobs:
         with:
           inlineScript: |
             az config set extension.use_dynamic_install=yes_without_prompt
-            az containerapp registry set -n uat-eurex-transformer-app -g darenNG2 --server sernovacontainerregistry.azurecr.io --username  ${{ secrets.EUREXEXAMPLE_REGISTRY_USERNAME }} --password ${{ secrets.EUREXEXAMPLE_REGISTRY_PASSWORD }}
-            az containerapp update -n uat-eurex-transformer-app -g darenNG2 --image sernovacontainerregistry.azurecr.io/eurex-example:${{ github.sha }}
-            az containerapp ingress enable -n uat-eurex-transformer-app -g darenNG2 --type external --target-port 8080 --transport auto
+            az containerapp registry set -n uat-eurex-transformer-app -g darenRG2 --server sernovacontainerregistry.azurecr.io --username  ${{ secrets.EUREXEXAMPLE_REGISTRY_USERNAME }} --password ${{ secrets.EUREXEXAMPLE_REGISTRY_PASSWORD }}
+            az containerapp update -n uat-eurex-transformer-app -g darenRG2 --image sernovacontainerregistry.azurecr.io/eurex-example:${{ github.sha }}
+            az containerapp ingress enable -n uat-eurex-transformer-app -g darenRG2 --type external --target-port 8080 --transport auto
